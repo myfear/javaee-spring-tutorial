@@ -25,6 +25,15 @@ Memory: At least 4 GB+, preferred 8 GB
 ### Install WildFly
 WildFly 10 is the latest release in a series of JBoss open-source application server offerings.  WildFly 10 is an exceptionally fast, lightweight and powerful implementation of the Java Enterprise Edition 7 Platform specifications.  The state-of-the-art architecture built on the Modular Service Container enables services on-demand when your application requires them.
 
-Simply extract your chosen download to the directory of your choice. You can install WildFly 10 on any operating system that supports the zip or tar formats. Refer to the Release Notes for additional information related to the release.
+Simply extract your chosen download to the directory of your choice (we call it +%JBOSS_HOME+). You can install WildFly 10 on any operating system that supports the zip or tar formats. Refer to the Release Notes for additional information related to the release.
 
-Briefly go over the https://docs.jboss.org/author/display/WFLY10/Getting+Started+Guide[getting started guide and verify that your server is running]
+To start WildFly 10 using the default web profile configuration in "standalone" mode, change directory to $JBOSS_HOME/bin.
+
+[source, console]
+----
+./standalone.sh
+----
+
+As with previous WildFly releases, you can point your browser to http://localhost:8080 (if using the default configured http port) which brings you to the Welcome Screen:
+
+If you run into problems, refer to the complete  https://docs.jboss.org/author/display/WFLY10/Getting+Started+Guide[getting started guide and verify] that you completed all necessary steps.

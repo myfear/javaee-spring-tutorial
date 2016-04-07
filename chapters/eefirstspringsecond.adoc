@@ -18,10 +18,10 @@ mvn -DarchetypeGroupId=com.airhacks -DarchetypeArtifactId=javaee7-essentials-arc
 
 Open the project with your favorite IDE and look around a bit. Create a simple +GreetingService+
 
-[source, console]
+[source, java]
 ----
 
-@Path("customer")
+@Path("greet")
 public class GreetingService {
 
     @Context
@@ -36,3 +36,14 @@ public class GreetingService {
   }
 }
 ----
+
+Run a maven build:
+[source, console]
+----
+mvn install
+----
+
+and copy the artefact (+example.war+) from the /target folder to the %JBOSS_HOME/standalone/deployments folder and watch it getting deployed.
+Point your browser to http://localhost:8080/example/resources/greet[http://localhost:8080/example/resources/greet] and test it out.
+
+Congratulations, you have your first Java EE mini application up and running.
