@@ -2,10 +2,10 @@
 
 ## Java EE first, Spring second
 
-Let's start to have a nice application on Java EE.
+Let's start to have a nice spring application on Java EE. First of all, we're going to install WildFly and create a simple example application.
 
 
-### Install WildFly 10
+### Install WildFly 10 and create simple application
 Unzip the distribution to a folder of your choice.
 
 Create a blank Java EE application via maven in a local folder.
