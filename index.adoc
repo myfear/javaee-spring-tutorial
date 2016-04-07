@@ -1,0 +1,15 @@
+# Integration architecture with Java EE and Spring
+04/11/2016
+:toc:
+:toc-title: Table of Contents
+:toclevels: 3
+:toc-placement!:
+:data-uri:
+:imagesdir: ./chapters/images
+
+Latest HTML:
+https://htmlpreview.github.io/?https://raw.githubusercontent.com/myfear/javaee-spring-tutorial/master/index.html
+
+toc::[]
+
+include::chapters/preparation.adoc[]
