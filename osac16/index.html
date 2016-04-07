@@ -500,10 +500,33 @@ Memory: At least 4 GB+, preferred 8 GB</p>
 </ol>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_install_wildfly">Install WildFly</h3>
+<div class="paragraph">
+<p>WildFly 10 is the latest release in a series of JBoss open-source application server offerings.  WildFly 10 is an exceptionally fast, lightweight and powerful implementation of the Java Enterprise Edition 7 Platform specifications.  The state-of-the-art architecture built on the Modular Service Container enables services on-demand when your application requires them.</p>
+</div>
+<div class="paragraph">
+<p>Simply extract your chosen download to the directory of your choice (we call it %JBOSS_HOME). You can install WildFly 10 on any operating system that supports the zip or tar formats. Refer to the Release Notes for additional information related to the release.</p>
+</div>
+<div class="paragraph">
+<p>To start WildFly 10 using the default web profile configuration in "standalone" mode, change directory to $JBOSS_HOME/bin.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-console" data-lang="console">./standalone.sh</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As with previous WildFly releases, you can point your browser to <a href="http://localhost:8080" class="bare">http://localhost:8080</a> (if using the default configured http port) which brings you to the Welcome Screen:</p>
+</div>
+<div class="paragraph">
+<p>If you run into problems, refer to the complete  <a href="https://docs.jboss.org/author/display/WFLY10/Getting+Started+Guide">getting started guide and verify</a> that you completed all necessary steps.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_java_ee_first_spring_second">Java EE first, Spring second</h2>
+<h2 id="eefirstspringsecond">Java EE first, Spring second</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Let&#8217;s start to have a nice application on Java EE.</p>
@@ -526,21 +549,36 @@ Memory: At least 4 GB+, preferred 8 GB</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-console" data-lang="console">@Path("customer")
+<pre class="highlight"><code class="language-java" data-lang="java">@Path("greet")
 public class GreetingService {
 
     @Context
     UriInfo context;
 
-    @GET
-    @Produces("application/json")
-    public String getJson() {
-        String text = "WildFly Application " + context.getBaseUri() + " - Hostname: " + System.getenv().get("HOSTNAME") + "";
-        return "{\"text\":\"" + text + "\"}";
+  @GET
+  @Produces("application/json")
+  public String getJson() {
+      String text = "WildFly Application " + context.getBaseUri() + " - Hostname: " + System.getenv().get("HOSTNAME") + "";
+      return "{\"hello\":\"world\"}";
 
-    }
+  }
 }</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Run a maven build:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-console" data-lang="console">mvn install</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and copy the artefact (example.war) from the /target folder to the %JBOSS_HOME/standalone/deployments folder and watch it getting deployed.
+Point your browser to <a href="http://localhost:8080/example/resources/greet">http://localhost:8080/example/resources/greet</a> and test it out.</p>
+</div>
+<div class="paragraph">
+<p>Congratulations, you have your first Java EE mini application up and running.</p>
 </div>
 </div>
 </div>
