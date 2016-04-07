@@ -1,2 +1,23 @@
 [[Preparation]]
 ## Preparation
+
+This section describes what, how, and where to install the software needed for this lab.
+
+### Hardware
+Operating System: Windows 7 (SP1), Mac OS X (10.8 or later), Fedora (21 or later)
+Memory: At least 4 GB+, preferred 8 GB
+
+### Software
+
+. Java: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html[Oracle JDK 8u45 or later]
+. Web Browser
+.. https://www.google.com/chrome/browser/desktop/[Chrome]
+.. link:http://www.getfirefox.com[Firefox]
+.. http://wildfly.org/downloads/[WildFly 10.0.0.Final]
+.. http://www.eclipse.org/downloads/[Eclipse] (or IDE of choice)
+
+### Maven
+
+. Download Apache Maven...
+.. from Internet: https://maven.apache.org/download.cgi
+. Unzip to a directory of your choice and add it to the `PATH`.

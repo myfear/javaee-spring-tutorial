@@ -9,7 +9,7 @@ Markus Eisele (Lightbend), Joshua Long (Pivotal)
 :imagesdir: ./chapters/images
 
 Latest HTML:
-https://htmlpreview.github.io/?https://raw.githubusercontent.com/myfear/javaee-spring-tutorial/master/osac16/index.html
+https://htmlpreview.github.io/?https://raw.githubusercontent.com/myfear/javaee-spring-tutorial/master/osac16/index.html[This document online]
 
 Results matter. Choosing a technology stack shouldn’t be an either/or discussion. Thankfully, when it comes to the industry’s two largest enterprise application platforms—Java EE and Spring—architects can cherry pick and integrate with ease. Markus Eisele and Joshua Long explain how architects and developers can benefit from the best of both technologies and embrace cloud-ready JVM architectures. In a hands-on workshop, Markus and Josh outline five steps for implementation through discussion and exercises:
 
