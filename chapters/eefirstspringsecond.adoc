@@ -15,3 +15,24 @@ Create a blank Java EE application via maven in a local folder.
 mvn -DarchetypeGroupId=com.airhacks -DarchetypeArtifactId=javaee7-essentials-archetype -DarchetypeVersion=1.3 -DarchetypeRepository=http://repo.maven.apache.org/maven2/ -DgroupId=com.osa16 -DartifactId=example -Dversion=1.0-SNAPSHOT -Dpackage=com.osa16.example -Darchetype.interactive=false --batch-mode archetype:generate
 
 ----
+
+Open the project with your favorite IDE and look around a bit. Create a simple +GreetingService+
+
+[source, console]
+----
+
+@Path("customer")
+public class GreetingService {
+
+    @Context
+    UriInfo context;
+
+  @GET
+  @Produces("application/json")
+  public String getJson() {
+      String text = "WildFly Application " + context.getBaseUri() + " - Hostname: " + System.getenv().get("HOSTNAME") + "";
+      return "{\"hello\":\"world\"}";
+
+  }
+}
+----

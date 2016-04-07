@@ -21,3 +21,10 @@ Memory: At least 4 GB+, preferred 8 GB
 . Download Apache Maven...
 .. from Internet: https://maven.apache.org/download.cgi
 . Unzip to a directory of your choice and add it to the `PATH`.
+
+### Install WildFly
+WildFly 10 is the latest release in a series of JBoss open-source application server offerings.  WildFly 10 is an exceptionally fast, lightweight and powerful implementation of the Java Enterprise Edition 7 Platform specifications.  The state-of-the-art architecture built on the Modular Service Container enables services on-demand when your application requires them.
+
+Simply extract your chosen download to the directory of your choice. You can install WildFly 10 on any operating system that supports the zip or tar formats. Refer to the Release Notes for additional information related to the release.
+
+Briefly go over the https://docs.jboss.org/author/display/WFLY10/Getting+Started+Guide[getting started guide and verify that your server is running]
