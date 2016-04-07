@@ -5,7 +5,6 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<meta name="author" content="Markus Eisele (Lightbend), Joshua Long (Pivotal)">
 <title>Integration architecture with Java EE and Spring</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -421,15 +420,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <body class="article">
 <div id="header">
 <h1>Integration architecture with Java EE and Spring</h1>
-<div class="details">
-<span id="author" class="author">Markus Eisele (Lightbend), Joshua Long (Pivotal)</span><br>
-<span id="revnumber">version 1:30pm–5:00pm Monday,</span>
-<span id="revdate">04/11/2016</span>
-</div>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
+<div class="paragraph">
+<p>Markus Eisele (Lightbend), Joshua Long (Pivotal)
+1:30pm–5:00pm Monday, 04/11/2016</p>
+</div>
 <div class="paragraph">
 <p>Latest HTML:
 <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/myfear/javaee-spring-tutorial/master/osac16/index.html">This document online</a></p>
@@ -437,18 +435,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>Results matter. Choosing a technology stack shouldn’t be an either/or discussion. Thankfully, when it comes to the industry’s two largest enterprise application platforms—Java EE and Spring—architects can cherry pick and integrate with ease. Markus Eisele and Joshua Long explain how architects and developers can benefit from the best of both technologies and embrace cloud-ready JVM architectures. In a hands-on workshop, Markus and Josh outline five steps for implementation through discussion and exercises:</p>
 </div>
-<div id="toc" class="toc">
-<div id="toctitle" class="title">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#Preparation">Preparation</a>
-<ul class="sectlevel2">
-<li><a href="#_hardware">Hardware</a></li>
-<li><a href="#_software">Software</a></li>
-<li><a href="#_maven">Maven</a></li>
-</ul>
-</li>
-</ul>
-</div>
+<!-- toc disabled -->
 </div>
 </div>
 <div class="sect1">
@@ -508,31 +495,71 @@ Memory: At least 4 GB+, preferred 8 GB</p>
 </div>
 </li>
 <li>
-<p>Unzip to a directory of your choice and add it to the <code>PATH</code>.
-## Java EE first, Spring second</p>
-<div id="springfirstjavaeesecond" class="paragraph">
-<p>## Spring first, Java EE second</p>
-</div>
-<div id="buildabridge" class="paragraph">
-<p>## Building a bridge between platforms</p>
-</div>
-<div id="integrationandmicroservices" class="paragraph">
-<p>## Integration and microservices</p>
-</div>
-<div id="missingpieces" class="paragraph">
-<p>## Missing pieces and wrap-up</p>
-</div>
+<p>Unzip to a directory of your choice and add it to the <code>PATH</code>.</p>
 </li>
 </ol>
 </div>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_java_ee_first_spring_second">Java EE first, Spring second</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s start to have a nice application on Java EE.</p>
+</div>
+<div class="sect2">
+<h3 id="_install_wildfly_10">Install WildFly 10</h3>
+<div class="paragraph">
+<p>Unzip the distribution to a folder of your choice.</p>
+</div>
+<div class="paragraph">
+<p>Create a blank Java EE application via maven in a local folder.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-console" data-lang="console">mvn -DarchetypeGroupId=com.airhacks -DarchetypeArtifactId=javaee7-essentials-archetype -DarchetypeVersion=1.3 -DarchetypeRepository=http://repo.maven.apache.org/maven2/ -DgroupId=com.osa16 -DartifactId=example -Dversion=1.0-SNAPSHOT -Dpackage=com.osa16.example -Darchetype.interactive=false --batch-mode archetype:generate</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="springfirstjavaeesecond">Spring first, Java EE second</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s use Java EE APIs from Spring.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="buildabridge">Building a bridge between platforms</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Build a bridge between the two platforms.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="integrationandmicroservices">Integration and microservices</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Integration and microservices</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="missingpieces">Missing pieces and wrap-up</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These are the missing pieces.</p>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1:30pm–5:00pm Monday<br>
-Last updated 2016-04-07 11:28:00 CEST
+Last updated 2016-04-07 11:38:34 CEST
 </div>
 </div>
 </body>

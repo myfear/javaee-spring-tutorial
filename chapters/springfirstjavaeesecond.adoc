@@ -1,2 +1,4 @@
 [[springfirstjavaeesecond]]
 ## Spring first, Java EE second
+
+Let's use Java EE APIs from Spring.

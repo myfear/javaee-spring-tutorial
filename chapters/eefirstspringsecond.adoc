@@ -1,2 +1,17 @@
 [[eefirstspringsecond]]
+
 ## Java EE first, Spring second
+
+Let's start to have a nice application on Java EE.
+
+
+### Install WildFly 10
+Unzip the distribution to a folder of your choice.
+
+Create a blank Java EE application via maven in a local folder.
+
+[source, console]
+----
+mvn -DarchetypeGroupId=com.airhacks -DarchetypeArtifactId=javaee7-essentials-archetype -DarchetypeVersion=1.3 -DarchetypeRepository=http://repo.maven.apache.org/maven2/ -DgroupId=com.osa16 -DartifactId=example -Dversion=1.0-SNAPSHOT -Dpackage=com.osa16.example -Darchetype.interactive=false --batch-mode archetype:generate
+
+----
