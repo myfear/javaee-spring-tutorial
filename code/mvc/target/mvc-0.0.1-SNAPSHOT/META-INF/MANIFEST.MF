@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: mvc
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: jlong
+Implementation-Vendor-Id: com.example
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_66
+Main-Class: ${start-class}
+
