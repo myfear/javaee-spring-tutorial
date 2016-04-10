@@ -47,3 +47,9 @@ and copy the artefact (+example.war+) from the /target folder to the %JBOSS_HOME
 Point your browser to http://localhost:8080/example/resources/greet[http://localhost:8080/example/resources/greet] and test it out.
 
 Congratulations, you have your first Java EE mini application up and running.
+
+
+
+http://start.spring.io/
+
+Web, JPA, H2
