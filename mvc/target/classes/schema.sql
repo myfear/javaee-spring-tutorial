@@ -1,0 +1,1 @@
+CREATE TABLE message (id serial, message varchar(255) NOT NULL )
