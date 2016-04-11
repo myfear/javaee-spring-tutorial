@@ -43,7 +43,7 @@ Change directory to $JBOSS_HOME/bin.
 
 You're going to need to run it using the _full_, not _web_, profile configuration. For the easiest experience, rename  `$JBOSS_HOME/bin/wildfly/standalone/configuration/standalone-full.xml` to `$JBOSS_HOME/bin/wildfly/standalone/configuration/standalone.xml`.
 
-Open the `standalone.xml` and find `urn:jboss:domain:messaging-activemq:1.0`. There, you'll see a `server` element and inside that a `security-setting` element. Let's make life easier for ourselves and disable security for this lab. Add the following inside the `security-setting` element:
+Open the `standalone.xml` and find `urn:jboss:domain:messaging-activemq:1.0`. There, you'll see a `server` element and inside that a `security-setting` element. Let's make life easier for ourselves and disable security for this lab. Add the following ABOVE the `security-setting` element:
 
 ```
 <security enabled="false"/>
