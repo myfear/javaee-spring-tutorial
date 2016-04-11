@@ -63,6 +63,18 @@ Save your changes and then, in the `$JBOSS_HOME/bin` directory, start Wildfly:
 ./standalone.sh
 ```
 
+Open another console and add a management user:
+```sh
+./add-user.sh
+```
+
+* a) Management user
+* User: "admin"
+* Password: "admin"
+* Answer "yes" (don't do this in production)
+* Re-enter Password: "admin"
+* hit return (no groups)
+* enter "no"
 
 As with previous WildFly releases, you can point your browser to http://localhost:8080 (if using the default configured HTTP port) which brings you to the Welcome Screen.
 
