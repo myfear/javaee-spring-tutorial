@@ -28,13 +28,13 @@ import static java.util.Arrays.asList;
 
 @SpringBootApplication
 @EnableJms
-public class MvcApplication {
+public class SpringOnEeApplication {
 
 	public static final String SPRING = "spring";
 	public static final String XA_SPRING = "xa-spring";
 
 	public static void main(String[] args) {
-		SpringApplication.run(MvcApplication.class, args);
+		SpringApplication.run(SpringOnEeApplication.class, args);
 	}
 }
 
@@ -46,12 +46,12 @@ class MessageProcessor {
 	@Autowired
 	private GreetingRepository greetingRepository;
 
-	@JmsListener(destination = MvcApplication.XA_SPRING)
+	@JmsListener(destination = SpringOnEeApplication.XA_SPRING)
 	public void onXaMessage(String msg) {
 		log.info("received " + msg);
 	}
 
-	@JmsListener(destination = MvcApplication.SPRING)
+	@JmsListener(destination = SpringOnEeApplication.SPRING)
 	public void onMessage(Map<String, String> msg) {
 		log.info("received " + msg);
 		Greeting greeting = new Greeting(msg.get("language"),
@@ -159,7 +159,7 @@ class XaWriteRestController {
 	public void xaWrite(@PathVariable boolean fail) {
 		String failMessage = (fail ? "" : "not ") + "failing to write @ " + Instant.now().toString();
 
-		this.jmsTemplate.convertAndSend(MvcApplication.XA_SPRING, failMessage);
+		this.jmsTemplate.convertAndSend(SpringOnEeApplication.XA_SPRING, failMessage);
 		this.xaWriteRepository.save(new XaWrite(failMessage));
 
 		if (fail) throw new RuntimeException(failMessage);
@@ -188,7 +188,7 @@ class GreetingsRestController {
 		Map<String, Object> msg = new HashMap<>();
 		msg.put("greeting", greeting.getGreeting());
 		msg.put("language", greeting.getLanguage());
-		this.jmsTemplate.convertAndSend(MvcApplication.SPRING, msg);
+		this.jmsTemplate.convertAndSend(SpringOnEeApplication.SPRING, msg);
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/languages/{language}")

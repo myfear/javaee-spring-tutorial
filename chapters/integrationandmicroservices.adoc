@@ -1,9 +1,0 @@
-[[integrationandmicroservices]]
-## Integration and microservices
-
-Integration and microservices
-
-### Calling a Spring Boot Application from WildFly
-JAX-RS 2.0 Client
-
-### Integrating JMS

@@ -1,4 +1,0 @@
-[[buildabridge]]
-## Building a bridge between platforms
-
-Build a bridge between the two platforms.
