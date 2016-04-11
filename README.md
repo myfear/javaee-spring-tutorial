@@ -23,8 +23,9 @@ Memory: At least 4 GB+, preferred 8 GB
 ### Software
 
 * Java: [Oracle JDK 8u45 or later](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-* Web Browser: [Chrome](https://www.google.com/chrome/browser/desktop/), [Firefox](http://www.getfirefox.com), [WildFly 10.0.0.Final](http://wildfly.org/downloads/)
-or [Eclipse](http://www.eclipse.org/downloads/) (or IDE of choice)
+* Web Browser: [Chrome](https://www.google.com/chrome/browser/desktop/), [Firefox](http://www.getfirefox.com),
+* [WildFly 10.0.0.Final](http://wildfly.org/downloads/)
+* [Eclipse](http://www.eclipse.org/downloads/) (or IDE of choice)
 
 ### Maven
 
